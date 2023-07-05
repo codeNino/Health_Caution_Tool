@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Status</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/status.css') }}">
+</head>
+<body>
+    <div class="fullpage">
+        <div class="general">
+            <div>
+                <header class="container">
+                    <div>
+                        <a href="#" class="logo"><img src="{{ url_for('static', filename='pictures/logo.jpg')}}" alt="LOGO"></a>
+                    </div>
+
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="{{url_for('home') }}">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <div class="body">
+                <div class="container1">
+                    <div class="title">Please make sure to take measurements when your body is at rest</div>
+                    <form action="{{ url_for('run_prediction') }}" method="post">
+                        <div class="user-details">
+                            <div class="input-box">
+                                <input type="number" min="20" step="0.01" max="50" name = "temperature" placeholder="Input your Temperature (Celsius)" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="number" min="50" step="0.01" max="200" name = "glucose" placeholder="Input Glucose Level (mg/dL) " required>
+                            </div>
+                            <div class="input-box">
+                                <input type="number" min="40"step="0.01"  max="200" name = "bloodpressure" placeholder="Input Blood Pressure (mm Hg)" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="number" name = "weight"step="0.01" min="20" max="500" placeholder="Input Weight (Kg)" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="number" name = "height" step="0.01" min="0" max="3" placeholder="Input Height (metres) " required>
+                            </div>
+                            <div class="input-box">
+                                <input type="number" name = "age"  min="13" max="100" placeholder="Age" required>
+                            </div>
+                        </div>
+                        <div class="gender-details">
+                            <input type="radio" name="gender" id="dot-1">
+                            <input type="radio" name="gender" id="dot-2">
+                            <span class="gender-title">Gender</span>
+                            <div class="category">
+                                <label for="dot-1">
+                                    <span class="dot one"> </span>
+                                    <span class="gender">Male</span>
+                                </label>
+                                <label for="dot-2">
+                                    <span class="dot two"> </span>
+                                    <span class="gender">Female</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="container-prediction-form-btn m-t-20">
+                            <button class="prediction-form-btn" onclick="run_prediction()" name="status" value="predict">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

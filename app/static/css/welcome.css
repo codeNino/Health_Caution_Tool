@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none; 
+}
+.fullpage{
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/static/pictures/background2.jpg);
+    /* background:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(/static/pictures/background1.jpg); */
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.container{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(59, 55, 55);
+}
+.logo img{
+    width: 100px;
+}
+header{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    /* background: whitesmoke; */
+    padding: 8px 30px;
+    transition: .3s;
+}
+header.sticky{
+    background: rgb(59, 55, 55);
+    padding: 13px 18%;
+    /* box-shadow: 0px 0px 10px rgb(0 0 0 / 10%); */
+}
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.navbar li{
+    display: inline-block;
+    margin: 0 30px;
+    line-height: normal;
+}
+.navbar li a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    line-height: 5px;
+}
+.navbar li a:hover{
+    color: rgb(156, 148, 148);
+    cursor: pointer;
+}
+.btn{
+    background-color:rgb(168, 52, 52);
+    height:40px;
+    width:80px;
+    border-radius: 5px;
+    color: white;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+.body1{
+    display: flex;
+    /* height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+    /* margin-top: 10px; */
+    padding-top: 15%;
+}
+.body1 h1{
+    color: white;
+    font-size: 70px;
+    font-weight: 700;
+    font-style: italic;
+}
+.special p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    padding-top: 15%;
+}
+.special input{
+    margin-left: 35%;
+    height: 45px;
+    width: 400px;
+    outline: none;
+    color: #fff;
+    background: rgb(168, 52, 52);
+    border-radius: 7px;
+    margin-top: 3%;
+}
+@media (max-width: 500px) {
+    .body1{
+        padding-top: 60%;
+    }
+    .special input{
+        margin-left: 4%;
+    }
+}

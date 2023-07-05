@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <!-- <link rel="stylesheet" type="text/css" href="verdict.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/verdict.css') }}">
+</head>
+<body>
+
+    <div class="fullpage">
+        <div>
+            <header class="container">
+                <div>
+                    <a href="#" class="logo"><img src="{{ url_for('static', filename='pictures/logo.jpg')}}" alt="LOGO"></a>
+                </div>
+
+                <nav class="navbar">
+                    <div>
+                        <a href="{{url_for('home') }}"class="logo"><li><button class="btn">Home</button></li></a>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div class="body">
+            <div class="body1">
+                <h1>Your Results Are!!!!</h1>
+            </div>
+                
+            <div class="special">
+                <p>BMI CATEGORY: {{ BMIVerdict.name }} <br>Comment: {{ BMIVerdict.comment }}</br></p>
+               
+                <p>DiabetesPrediction: {{ DiabetesVerdict.comment }}</p>
+                <p>Try going to a near by hospital for check up</p>
+            </div>
+        </div>
+    </div>
+  
+</body>
+</html>

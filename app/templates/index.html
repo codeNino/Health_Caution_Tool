@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/bootstrap-icons/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class="general">
+        <header class="container">
+            <div>
+                <a href="#" class="logo"><img src="{{ url_for('static', filename='pictures/logo.jpg')}}" alt="LOGO"></a>
+            </div>
+
+            <div class="navbar Navbar__Link-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <nav class="navbar">
+                <ul class="Navbar__Items">
+                    <li><a href="{{url_for('home') }}">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#touch">Contact</a></li>
+                    <!-- <li><a href="{{url_for('registration') }}"><button class="btn">Sign In</button></a></li> -->
+                </ul>
+                <div>
+                    <li><a href="{{url_for('registration') }}"><button class="btn">Sign In</button></a></li>
+                </div>
+            </nav>
+        </header>
+        <section class="home" >
+            <div class="heading">
+                <h1> HEALTH CAUTION TOOL</h1>
+                <p>find your health status, know the severity level and get possible solutions for your condition</p>
+            </div>
+            <div>
+                <a href="{{url_for('registration') }}"><button class="button" type="submit">Sign in</button></a>
+            </div>
+            <div>
+                <a href="{{url_for('registration') }}"><button class="button1" type="submit">Sign up</button></a>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div>
+                <div>
+                    <h2>About Us</h2>
+                </div>
+                <div class="about-special">
+                    <div class="about-side">
+                        <a href="#" class="logo1" ><img src="{{ url_for('static', filename='pictures/logo.jpg')}}" alt="LOGO"></a>
+                    </div>
+                    <div class="about-otherside">
+                        <p><span class="span">We help you,</span> Find your health status, know the severity level and get possible solutions for your condition</p>
+                        <p>
+                            The health caution tool offers medical services at the comfort and convineence of several clicks. We offer information
+                            and help about Blood pressure, Body Glucose, Body weigth, Heart Rate and Body temperature.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="touch" class="section-add2">
+            <div class="general1">
+                <div class="section header3">
+                    <h2>Get in Touch</h2>
+                </div>
+                <div class="section-header4">
+                    <h7> Send a Message</h7>
+                </div>
+                <form>
+                    <div class="row1">
+                        <div class="group">
+                            <input type="text" name="name" class="control" placeholder=" Your Name" id="name" required>
+                        </div>
+                        <div class="group">
+                            <input type="email" name="email" class="control" placeholder="Your Email" id="emaill" required>
+                        </div>
+                        <div class="group">
+                            <input type="text" name="subject" class="control" placeholder="Subject" id="subject" required>
+                        </div>
+                        <div class="group">
+                            <textarea rows="5" name="message" class="control" placeholder="Message"  required></textarea>
+                        </div>
+
+                        <div class="text-center"><button class="btn1" type="submit">Send Message</button></div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+        
+        <footer id="footer" class="footer">
+            <div class="follow">
+                <h7>Follow us</h7>
+                <p>For more information-please click on the links below.</p>
+                <div class="social">
+                    <a href="#" class="twitter" alt="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="facebook" alt="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="instagram" alt="instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a href = "{{url_for('home') }}" class="scroll-top"><i class="bi bi-arrow-up-short"></i></a>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
