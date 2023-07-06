@@ -12,7 +12,7 @@ itsdangerous==2.1.2
 Jinja2==3.1.2
 joblib==0.14.1
 MarkupSafe==2.1.2
-numpy==1.17.3
+numpy==1.19.5
 requests==2.31.0
 scikit-learn==0.22.1
 scipy==1.10.1
@@ -23,3 +23,4 @@ urllib3==2.0.2
 Werkzeug==2.3.4
 yarg==0.1.9
 zipp==3.15.0
+gunicorn

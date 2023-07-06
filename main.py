@@ -1,4 +1,4 @@
-import json, warnings
+import warnings
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from bmi_calculator import BMICalculator as calc
@@ -78,11 +78,6 @@ def run_prediction():
 
         BMIVerdict = calc.categorize(bmi)
         DiabetesVerdict = AI.classify(model_input)
-
-        # return {
-        #         "BMIVerdict" : json.dumps(BMIVerdict.__dict__),
-        #         "DiabetesVerdict" : json.dumps(DiabetesVerdict.__dict__)
-        #     }
 
         return render_template("verdict.html", BMIVerdict=BMIVerdict, DiabetesVerdict=DiabetesVerdict)
 
